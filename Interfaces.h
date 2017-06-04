@@ -118,13 +118,13 @@ void SelectionSort(container& sortContainer)
 		for (int j = i + 1; j < sortContainer.Size(); j++)
 		{
 			MinIter = sortContainer.CreateIter();
-			for (int min_i = 0; min_i < MinIndex; min_i++)
+			for (int iMin = 0; iMin < MinIndex; iMin++)
 				MinIter->Next();
 			if (MinIter->Next() > Iter->Next())
 				MinIndex = j;
 		}
 		MinIter = sortContainer.CreateIter();
-		for (int min_i = 0; min_i < MinIndex; min_i++)
+		for (int iMin = 0; iMin < MinIndex; iMin++)
 			MinIter->Next();
 		swap(MinIter->Next(), insIter->Next());
 	}
